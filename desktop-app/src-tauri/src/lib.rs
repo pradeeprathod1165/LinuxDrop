@@ -1,7 +1,6 @@
-#[tauri::command]
-fn greet(name: &str) -> String {
-    format!("OpenBridge backend connected: {}", name)
-}
+mod commands;
+
+use commands::system::greet;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
